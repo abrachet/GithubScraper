@@ -32,7 +32,7 @@ public class Main {
         File f = new File(serializationFile);
         
         if (!f.exists()) {
-            URL url = new URL("https://github.com/abrachet");
+            URL url = new URL("https://github.com/" + args[0]);
     
             pool.addTask(new ParseUsername(), url);
         } else {
