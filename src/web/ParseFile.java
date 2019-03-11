@@ -16,8 +16,6 @@ public class ParseFile
         int sloc = getSLOC(url);
         String filename = getFilename(url.toString());
         
-        System.out.printf("File %s had %d sloc\n", filename, sloc);
-        
         pool.addFileStats(filename, sloc);
     }
     
@@ -28,8 +26,6 @@ public class ParseFile
         
         int i = ++index;
         for (; line.charAt(i) != ' '; i++);
-        
-        System.out.println(line.substring(index, i));
         
         return Integer.parseInt(line.substring(index, i));
     }

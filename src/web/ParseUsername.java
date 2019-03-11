@@ -21,12 +21,9 @@ public class ParseUsername
         // mark user so we don't go through their repos again
         pool.markUser(user);
         
-        
         String urlStr = url.toString();
         
         URL repo = ParseUserRepositories.getUserRepoFromHomePage(urlStr);
-        
-        System.out.println(repo);
         
         pool.addTask(new ParseUserRepositories(), repo);
         

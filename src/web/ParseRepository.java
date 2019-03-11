@@ -25,7 +25,6 @@ public class ParseRepository
         Tuple2<ArrayList<URL>, ArrayList<URL>> tuple = findFilesAndDirs(reader);
         
         for (URL file : tuple._1) {
-            System.out.println("Going to parse file: " + file);
             pool.addTask(new ParseFile(), file);
         }
         
