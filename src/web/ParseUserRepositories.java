@@ -106,22 +106,4 @@ public class ParseUserRepositories
         return new Tuple2<>(arr, nextURL);
     }
     
-    public static void main(String[] args) throws Exception {
-        URL url = new URL("https://github.com/abrachet?tab=repositories");
-        LineNumberReader reader;
-        try {
-            reader = PageDownload.downloadPage(url);
-        } catch (IOException e) {
-            Logger.log("IOException when downloading page");
-            return;
-        }
-    
-        Tuple2<ArrayList<String>, String> tuple = findRepositories(reader);
-        
-        for (String s : tuple._1)
-            System.out.println(s);
-        
-        System.out.printf("%s\n", tuple._2);
-    }
-    
 }

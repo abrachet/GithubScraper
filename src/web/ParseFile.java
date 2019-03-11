@@ -61,10 +61,4 @@ public class ParseFile
         return url.substring(url.lastIndexOf('/') + 1);
     }
     
-    
-    public static void main(String[] args) throws Exception {
-        URL url = new URL("https://github.com/abrachet/ThreadPool/blob/master/src/internal_thpool.c");
-        
-        System.out.printf("there are %d lines\n", getSLOC(url));
-    }
 }
